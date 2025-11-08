@@ -71,7 +71,7 @@ Uses ESM2 (frozen protein encoder) and Q-Former to align protein embeddings with
 Unifies the pre-trained LLM and alignment module to enable multi-task biological reasoning (no downstream task-specific data required).  
 - Run command:
   ```bash
- python stage2.py 
+  python stage2.py 
    --devices '0,1,2,3,4,5,6,7' 
    --mode train 
    --filename stage2_07301646_2datasets_construct 
