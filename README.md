@@ -71,7 +71,23 @@ Uses ESM2 (frozen protein encoder) and Q-Former to align protein embeddings with
 Unifies the pre-trained LLM and alignment module to enable multi-task biological reasoning (no downstream task-specific data required).  
 - Run command:
   ```bash
- python stage2.py --devices '0,1,2,3,4,5,6,7' --mode train --filename stage2_07301646_2datasets_construct --num_query_token 8  --save_every_n_epochs 2 --max_epochs 10 --batch_size 4 --precision 'bf16-mixed' --num_workers 8 --plm_model  /nas/shared/kilab/wangyujia/ProtT3/plm_model/esm2-150m --bert_name /nas/shared/kilab/wangyujia/ProtT3/plm_model/microsoft --llm_name /oss/wangyujia/BIO/construction_finetuning/alpaca/v1-20250609-141541/checkpoint-50-merged  --llm_tune mid_lora  --stage1_path /nas/shared/kilab/wangyujia/ProtT3/all_checkpoints/stage1_07041727_2dataset/epoch=29.ckpt/converted.ckpt  --use_wandb_logger --dataset swiss-prot
+ python stage2.py 
+   --devices '0,1,2,3,4,5,6,7' 
+   --mode train 
+   --filename stage2_07301646_2datasets_construct 
+   --num_query_token 8  
+   --save_every_n_epochs 2 
+   --max_epochs 10 
+   --batch_size 4 
+   --precision 'bf16-mixed' 
+   --num_workers 8 
+   --plm_model  /nas/shared/kilab/wangyujia/ProtT3/plm_model/esm2-150m 
+   --bert_name /nas/shared/kilab/wangyujia/ProtT3/plm_model/microsoft 
+   --llm_name /oss/wangyujia/BIO/construction_finetuning/alpaca/v1-20250609-141541/checkpoint-50-merged  
+   --llm_tune mid_lora  
+   --stage1_path /nas/shared/kilab/wangyujia/ProtT3/all_checkpoints/stage1_07041727_2dataset/epoch=29.ckpt/converted.ckpt  
+   --use_wandb_logger 
+   --dataset swiss-prot
   ```
 
 
